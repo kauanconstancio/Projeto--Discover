@@ -25,8 +25,7 @@ a {
 }
 
 .light-mode .container .switch button {
-  right: -3px;
-  left: initial;
+  animation: slide-in 0.4s forwards;
 }
 
 body {
@@ -39,11 +38,12 @@ body {
   display: flex;
   color: var(--text-color);
   font-family: "Inter", sans-serif;
+  height: 920px;
 }
 body .container {
   margin-top: 56px;
   margin-bottom: 256px;
-  width: 588px;
+  max-width: 588px;
 }
 body .container .profile {
   padding: 24px;
@@ -75,6 +75,11 @@ body .container .switch button {
   left: 0;
   transform: translateY(-50%);
   z-index: 1;
+  animation: slide-back 0.3s forwards;
+}
+body .container .switch button:hover {
+  transition: all 0.1s;
+  outline: 8px solid var(--highlight-color);
 }
 body .container .switch span {
   display: block;
@@ -130,4 +135,29 @@ body .container .social a:hover {
 }
 body .container .footer p span {
   text-decoration: underline;
+}
+
+@media (max-width: 560px) {
+  :root {
+    --bg-url: url(./assets/bg-mobile.jpg);
+  }
+  .light-mode {
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+  }
+}
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 55%;
+  }
+}
+@keyframes slide-back {
+  from {
+    left: 55%;
+  }
+  to {
+    left: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
