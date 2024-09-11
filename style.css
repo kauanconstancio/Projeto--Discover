@@ -4,15 +4,33 @@ a {
   color: #fff;
 }
 
+:root {
+  --text-color: #fff;
+  --bg-url: url(assets/bg-desktop.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.2);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+}
+
+.light-mode {
+  --text-color: #000;
+  --bg-url: url(assets/bg-desktop-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.2);
+  --highlight-color: rgba(0, 0, 0, 0.2);
+}
+
 body {
-  background: url(assets/bg-mobile.jpg);
+  background: var(--bg-url);
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
   align-items: center;
   justify-content: center;
   display: flex;
-  color: #fff;
+  color: var(--text-color);
   font-family: "Inter", sans-serif;
 }
 body .container {
@@ -34,17 +52,18 @@ body .container .links {
   gap: 16px;
 }
 body .container .links a {
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--stroke-color);
   border-radius: 8px;
   padding: 16px 24px;
-  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  background-color: var(--surface-color);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   transition: all 0.3s ease;
 }
 body .container .links a:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1.5px solid #fff;
+  background-color: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
 }
 body .container .social {
   display: flex;
@@ -63,9 +82,10 @@ body .container .social a {
   align-items: center;
   display: flex;
   justify-content: center;
+  color: var(--text-color);
 }
 body .container .social a:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--highlight-color);
 }
 body .container .footer p span {
   text-decoration: underline;
