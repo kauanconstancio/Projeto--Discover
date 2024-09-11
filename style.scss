@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    background: url(assets/bg-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+
+    .container{
+        margin-top: 56px;
+        margin-bottom: 256px;
+        width: 588px;
+
+        .profile{
+            img{
+                width: 112px;
+                height: 112px;
+            }
+            h1{
+                font-size: 16px;
+            }
+        }
+
+        .links{
+            padding: 24px;
+            display: flex;         
+            flex-direction: column;
+            gap: 16px;
+            a{
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                border-radius: 8px;
+                padding: 16px 24px;
+                background-color: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(4px);
+                -webkit-backdrop-filter: blur(4px);
+                transition: all 0.3s ease;
+            }
+            a:hover{
+                background-color: rgba(255, 255, 255, 0.05);
+                border: 1.5px solid #fff;
+            }
+        }
+
+        .social{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            padding: 24px;
+            a{
+                font-size: 30px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                transition: all 0.3s ease;
+                padding: 10px;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+            a:hover{
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+        .footer{
+            p{
+                span{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+}
+
+
